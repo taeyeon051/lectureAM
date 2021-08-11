@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const log = console.log;
+
+        function n(a, b) {
+            return a + b;
+        }
+
+        let sum = n(10, 20);
+
+        log(sum);
+
+        // 일정시간 간격마다 특정함수를 계속 실행
+        let num = 1;
+        let id = 0;
+
+        function interval() {
+            log(`${".".repeat(num)}`);
+            num++;
+            if (num >= 10) {
+                clearInterval(id)
+            }
+        }
+
+        id = setInterval(interval, 500);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+@font-face {
+    src: url(../font/DS-DIGIT.TTF);
+    font-family: 'DS-DIGIT';
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DS-DIGIT';
+}
+
+#container {
+    width: 1440px;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #dae5e6;
+}
+
+.watch {
+    width: 800px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+    border: 50px solid #f3f3f3;
+    background-color: #ddd;
+}
+/* hour, min, sec */
+.watch>div:not(.colon) {
+    width: 110px;
+    height: 200px;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+}
+
+.colon {
+    font-size: 100px;
+    height: 100%;
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+.watch>div>.box {
+    width: 100%;
+    height: 100%;
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.watch>div>.box:first-child {
+    top: 0;
+}
