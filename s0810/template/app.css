@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 900px;
+    height: 600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+.msg-box {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    white-space: nowrap;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: rgba(87, 86, 86, 0.8);
+    color: #fff;
+    padding: 0.25rem 0.75rem;
+    font-size: 20px;
+    z-index: 10;
+    transform: translateX(-50%);
+}
+
+.slider {
+    width: 1800px;
+    height: 300px;
+    display: flex;
+    position: relative;
+    left: 0;
+}
+
+.slider>.box {
+    width: 300px;
+    height: 100%;
+}
+
+.slider>.box>img {
+    width: 300px;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0 0;
+}
+
+.slider>.box:nth-child(1)>img { object-fit: contain; }
+
+.controller {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.controlBtn {
+    border: 1px solid rgb(16, 58, 136);
+    background-color: rgb(39, 96, 202);
+    color: #fff;
+    padding: 0.25rem 0.75rem;
+    font-size: 20px;
+    border-radius: 0.25rem;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.controlBtn:disabled {
+    background-color: rgb(144, 145, 148);
+    border: 1px solid rgb(118, 119, 121);
+    cursor: not-allowed;
+}
+
+.controlBtn:hover {
+    background-color: rgb(107, 141, 206);
+}
+
+.indicator {
+    width: 100%;
+    position: absolute;
+    bottom: 110px;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+}
+
+.indicator>.pin {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgb(185, 185, 185);
+    margin: 0 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.indicator>.pin.active {
+    background-color: rgb(24, 74, 240);
+}

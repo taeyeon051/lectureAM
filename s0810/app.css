@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.slide {
+    width: 1800px;
+    height: 500px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.slide>.img-container {
+    width: 800px;
+    height: 100%;
+    position: relative;
+}
+
+.slide>.img-container>.slide-image {
+    width: 800px;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0; left: 0;
+    filter: brightness(85%);
+}
+
+.slide>.img-container>.slide-image:nth-child(1) { left: -100%; }
+
+.slide>.button-container {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    width: 800px;
+    box-sizing: border-box;
+}
+
+.slide>.button-container>.slide-btn {
+    padding: 25px 15px;
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 45px;
+    color: #fff;
+    border: 0;
+    cursor: pointer;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+}
+
+.slide>.pin-container {
+    position: absolute;
+    bottom: 20px; left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 150px;
+}
+
+.slide>.pin-container>.pin {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+.slide>.pin-container>.pin.active {
+    width: 15px;
+    height: 15px;
+    background-color: rgb(24, 96, 155);
+}
+
+.btns {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    bottom: 10px; right: 620px;
+    color: #fff;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.btns>div {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+}
+
+.nowSlide {
+    width: 100px;
+    height: 32px;
+    position: absolute;
+    bottom: 10px; right: 510px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    background-color: #fff;
+}
