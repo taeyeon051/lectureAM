@@ -22,14 +22,15 @@ fetch(url)
         let value9 = $(".ca_value").eq(7).text().trim();
 
         let recordData =
-            `<h1>전일대비 현황</h1>
-소계 : ${value1}, 국내발생 : ${value2}, 해외유입 : ${value3}
-<p>격리해제</p>
-누적 : ${value4}, 전일대비 : ${value5}
-<p>격리중</p>
-누적 : ${value6}, 전일대비 : ${value7}
-<p>사망</p>
-누적 : ${value8}, 전일대비 : ${value9}`;
+            `<title>코로나 현황 (0110 김태연)</title>
+            <h1>전일대비 현황</h1>
+            소계 : ${value1}, 국내발생 : ${value2}, 해외유입 : ${value3}
+            <p>격리해제</p>
+            누적 : ${value4}, 전일대비 : ${value5}
+            <p>격리중</p>
+            누적 : ${value6}, 전일대비 : ${value7}
+            <p>사망</p>
+            누적 : ${value8}, 전일대비 : ${value9}`;
 
         return fs.writeFile(filename, recordData);
     }).then(() => {
